@@ -1,0 +1,3 @@
+[submodule "SafariExtension/Resources"]
+	path = SafariExtension/Resources
+	url = ../DemoExtension/
