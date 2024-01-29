@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D27F0B1A2B68435B0009840F /* iOSContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27F0B182B68435B0009840F /* iOSContentView.swift */; };
+		D27F0B1B2B68435B0009840F /* iOSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27F0B192B68435B0009840F /* iOSViewModel.swift */; };
+		D27F0B1F2B6843830009840F /* MacContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27F0B1D2B6843830009840F /* MacContentView.swift */; };
+		D27F0B202B6843830009840F /* MacOSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27F0B1E2B6843830009840F /* MacOSViewModel.swift */; };
 		D2BACA582B682CA2004CA94F /* SafariExtensionExplorerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BACA572B682CA2004CA94F /* SafariExtensionExplorerApp.swift */; };
 		D2BACA5A2B682CA2004CA94F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BACA592B682CA2004CA94F /* ContentView.swift */; };
 		D2BACA5C2B682CA3004CA94F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2BACA5B2B682CA3004CA94F /* Assets.xcassets */; };
@@ -48,6 +52,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D27F0B182B68435B0009840F /* iOSContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSContentView.swift; sourceTree = "<group>"; };
+		D27F0B192B68435B0009840F /* iOSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSViewModel.swift; sourceTree = "<group>"; };
+		D27F0B1D2B6843830009840F /* MacContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacContentView.swift; sourceTree = "<group>"; };
+		D27F0B1E2B6843830009840F /* MacOSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacOSViewModel.swift; sourceTree = "<group>"; };
 		D2BACA542B682CA2004CA94F /* SafariExtensionExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafariExtensionExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BACA572B682CA2004CA94F /* SafariExtensionExplorerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionExplorerApp.swift; sourceTree = "<group>"; };
 		D2BACA592B682CA2004CA94F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +95,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D27F0B172B68435B0009840F /* iOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				D27F0B182B68435B0009840F /* iOSContentView.swift */,
+				D27F0B192B68435B0009840F /* iOSViewModel.swift */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		D27F0B1C2B6843830009840F /* MacOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				D27F0B1D2B6843830009840F /* MacContentView.swift */,
+				D27F0B1E2B6843830009840F /* MacOSViewModel.swift */,
+			);
+			path = "MacOS (App)";
+			sourceTree = "<group>";
+		};
 		D2BACA4B2B682CA2004CA94F = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +135,8 @@
 		D2BACA562B682CA2004CA94F /* SafariExtensionExplorer */ = {
 			isa = PBXGroup;
 			children = (
+				D27F0B1C2B6843830009840F /* MacOS (App) */,
+				D27F0B172B68435B0009840F /* iOS (App) */,
 				D2BACA572B682CA2004CA94F /* SafariExtensionExplorerApp.swift */,
 				D2BACA592B682CA2004CA94F /* ContentView.swift */,
 				D2BACA5B2B682CA3004CA94F /* Assets.xcassets */,
@@ -260,8 +288,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D27F0B1F2B6843830009840F /* MacContentView.swift in Sources */,
+				D27F0B1B2B68435B0009840F /* iOSViewModel.swift in Sources */,
 				D2BACA5A2B682CA2004CA94F /* ContentView.swift in Sources */,
 				D2BACA582B682CA2004CA94F /* SafariExtensionExplorerApp.swift in Sources */,
+				D27F0B202B6843830009840F /* MacOSViewModel.swift in Sources */,
+				D27F0B1A2B68435B0009840F /* iOSContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,8 +535,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -535,8 +570,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

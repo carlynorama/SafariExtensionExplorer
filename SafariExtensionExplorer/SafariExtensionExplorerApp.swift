@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+
 @main
 struct SafariExtensionExplorerApp: App {
     var body: some Scene {

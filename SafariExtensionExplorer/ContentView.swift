@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel = ViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
+        VStack(spacing: 10) {
+            Image(systemName: "safari.fill")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+#if os(macOS)
+            MacContentView().environmentObject(viewModel)
+#else
+            iOSContentView()
+#endif
+
         }
         .padding()
+        
+ 
+        
     }
 }
 
