@@ -9,5 +9,6 @@
         - (`git init . ; git add . ; git commit -m "Initialize repository"`)
     - in SafariExtensionExplorer
         - `git -c protocol.file.allow=always submodule add ../DemoExtension/ SafariExtension/Resources`
-- 
+- Add Most Basic Views for MacOS and test
+- Add Most Basic Views for iOS, add SDK for iOS to Extension Target
 
