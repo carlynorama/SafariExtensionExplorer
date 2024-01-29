@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D260C7C52B684EED00314D61 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D260C7C42B684EED00314D61 /* Constants.swift */; };
 		D27F0B1A2B68435B0009840F /* iOSContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27F0B182B68435B0009840F /* iOSContentView.swift */; };
 		D27F0B1B2B68435B0009840F /* iOSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27F0B192B68435B0009840F /* iOSViewModel.swift */; };
 		D27F0B1F2B6843830009840F /* MacContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27F0B1D2B6843830009840F /* MacContentView.swift */; };
@@ -52,6 +53,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D260C7C42B684EED00314D61 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D27F0B182B68435B0009840F /* iOSContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSContentView.swift; sourceTree = "<group>"; };
 		D27F0B192B68435B0009840F /* iOSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSViewModel.swift; sourceTree = "<group>"; };
 		D27F0B1D2B6843830009840F /* MacContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D260C7C62B684EF700314D61 /* Shared (App) */ = {
+			isa = PBXGroup;
+			children = (
+				D260C7C42B684EED00314D61 /* Constants.swift */,
+				D2BACA592B682CA2004CA94F /* ContentView.swift */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
 		D27F0B172B68435B0009840F /* iOS (App) */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +149,7 @@
 				D27F0B1C2B6843830009840F /* MacOS (App) */,
 				D27F0B172B68435B0009840F /* iOS (App) */,
 				D2BACA572B682CA2004CA94F /* SafariExtensionExplorerApp.swift */,
-				D2BACA592B682CA2004CA94F /* ContentView.swift */,
+				D260C7C62B684EF700314D61 /* Shared (App) */,
 				D2BACA5B2B682CA3004CA94F /* Assets.xcassets */,
 				D2BACA5D2B682CA3004CA94F /* SafariExtensionExplorer.entitlements */,
 				D2BACA5E2B682CA3004CA94F /* Preview Content */,
@@ -292,6 +303,7 @@
 				D27F0B1B2B68435B0009840F /* iOSViewModel.swift in Sources */,
 				D2BACA5A2B682CA2004CA94F /* ContentView.swift in Sources */,
 				D2BACA582B682CA2004CA94F /* SafariExtensionExplorerApp.swift in Sources */,
+				D260C7C52B684EED00314D61 /* Constants.swift in Sources */,
 				D27F0B202B6843830009840F /* MacOSViewModel.swift in Sources */,
 				D27F0B1A2B68435B0009840F /* iOSContentView.swift in Sources */,
 			);
@@ -539,7 +551,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -574,7 +586,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

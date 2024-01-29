@@ -21,7 +21,7 @@ struct iOSContentView: View {
                 }
             }
             Button("Open an Example Page") {
-                if let url = URL(string: "https://en.wikipedia.org/wiki/Fish") {
+                if let url = URL(string: goodSamplePage) {
                     UIApplication.shared.open(url)
                 }
             }
