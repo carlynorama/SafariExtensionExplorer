@@ -20,6 +20,7 @@
 		D2BACA5B2B682CA3004CA94F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2BACA5D2B682CA3004CA94F /* SafariExtensionExplorer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SafariExtensionExplorer.entitlements; sourceTree = "<group>"; };
 		D2BACA5F2B682CA3004CA94F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D2BACA662B682CCF004CA94F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +37,7 @@
 		D2BACA4B2B682CA2004CA94F = {
 			isa = PBXGroup;
 			children = (
+				D2BACA662B682CCF004CA94F /* README.md */,
 				D2BACA562B682CA2004CA94F /* SafariExtensionExplorer */,
 				D2BACA552B682CA2004CA94F /* Products */,
 			);
