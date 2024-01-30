@@ -36,3 +36,21 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
     }
 
 }
+
+
+//STORAGE:
+
+//simpler version from WWDC 2023 talk "What's New in Safari Extensions"
+//https://developer.apple.com/wwdc23/10119
+//func beginRequest(with context: NSExtensionContext) {
+//        guard let item = context.inputItems.first as? NSExtensionItem, let userInfo = item.userInfo as? [String:Any] else {
+//            return
+//        }
+//
+//        if let profileIdentifier = userInfo[SFExtensionProfileKey] as? UUID {
+//            //Perform profile specific tasks
+//        } else {
+//            //non-specific tasks
+//        }
+    //...
+//}

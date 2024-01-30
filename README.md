@@ -12,3 +12,7 @@
 - Add Most Basic Views for MacOS and test
 - Add Most Basic Views for iOS, add SDK for iOS to Extension Target
 
+
+## References
+- WWDC 2023 talk "[What's New in Safari Extensions](https://developer.apple.com/wwdc23/10119)" 
+- https://developer.apple.com/documentation/safariservices/safari_web_extensions
