@@ -8,7 +8,12 @@
 import SafariServices
 import os.log
 
+//let SFExtensionMessageKey = "message"  //in some example apps not others.
+
 class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
+    //private var context: NSExtensionContext?
+    
+
 
     func beginRequest(with context: NSExtensionContext) {
         let request = context.inputItems.first as? NSExtensionItem
@@ -33,10 +38,14 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
         response.userInfo = [ SFExtensionMessageKey: [ "echo": message ] ]
 
         context.completeRequest(returningItems: [ response ], completionHandler: nil)
+ 
     }
+    
+    
+    
+    
 
 }
-
 
 //STORAGE:
 

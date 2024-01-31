@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct MacContentView: View {
+    @Environment(\.openURL) var openURL
+    
     @EnvironmentObject var viewModel:ViewModel
     @State var enabledStatusText:String = ""
     var body: some View {
@@ -20,14 +22,25 @@ struct MacContentView: View {
             
             Button("Quit and Open Safari Settings") {
                 Task {
-                    await viewModel.openSafariSetting()
+                    await viewModel.openSafariSettings()
                 }
             }
+            Button("Open Example Page / openURL style") {
+                openURL(URL(string: goodSamplePage)!)
+            }
+            Button("Send Message To Extension") {
+                Task {
+                    await viewModel.sendBackgroundMessageToExtension(title: "DemoMessage", message: ["Hello":"World"])
+                }
+            }
+            
         }.task {
             await viewModel.setExtensionStatus()
             enabledStatusText = viewModel.isEnabled ? "enabled" : "disabled"
         }
     }
+
+
 }
 
 #Preview {

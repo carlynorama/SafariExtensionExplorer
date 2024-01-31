@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct iOSContentView: View {
+    @EnvironmentObject var viewModel:ViewModel
+    
     var body: some View {
         VStack {
             Text("Turn on the Safari extension \(extensionName) in “Settings › Safari”")
@@ -25,6 +27,7 @@ struct iOSContentView: View {
                     UIApplication.shared.open(url)
                 }
             }
+            Link("Open Page as Link", destination: URL(string: goodSamplePage))
         }
     }
 }

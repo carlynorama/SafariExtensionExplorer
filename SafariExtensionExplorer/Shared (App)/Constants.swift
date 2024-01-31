@@ -8,7 +8,8 @@
 
 
 let extensionName = "SafariExtension"
-let goodSamplePage = "https://en.wikipedia.org/wiki/Fish"
+let goodSamplePage = "https://www.whynotestflight.com"
+
 
 #if os(macOS)
 //Used by https://developer.apple.com/documentation/safariservices/sfsafariapplication/2202266-showpreferencesforextension

@@ -18,7 +18,7 @@ struct ContentView: View {
 #if os(macOS)
             MacContentView().environmentObject(viewModel)
 #else
-            iOSContentView()
+            iOSContentView().environmentObject(viewModel)
 #endif
 
         }
