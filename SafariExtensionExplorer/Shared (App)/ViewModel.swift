@@ -91,7 +91,7 @@ class ViewModel:ObservableObject {
 
 //MARK: Storage
 
-//Deprecated? methods for opening safari windows?
+//Deprecated? Need UIKit? Methods for opening safari windows.
 // The other methods were not missing the context.
 //No current extension context; trying most recent context
 //No most recent extension context

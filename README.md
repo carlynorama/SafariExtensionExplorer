@@ -19,10 +19,13 @@ Steps taken:
     - Enable AppGroup (So Containing App Target and Extension Target can talk.)For Each target:
         - Sign&Cap > AppGroup for MacOS and iOSetc bundles
         - Add to same AppGroup 
-    - XPCConnection (Unimplemented, is this Mach?)
+        - Connect Up UserDefaults
+        - TODO: Monitor a folder a la [DocC's Directory Monitor](https://github.com/apple/swift-docc/blob/main/Sources/SwiftDocCUtilities/Utility/DirectoryMonitor.swift)
+    - XPCConnection (Unimplemented)
         - https://github.com/ChimeHQ/AsyncXPCConnection
         - https://github.com/CharlesJS/SwiftyXPC
-        - (TODO: unix domain sockets vs web sockets)
+        - (TODO: unix domain sockets vs web sockets for Linux)
+- [Improve Layout](https://developer.apple.com/documentation/swiftui/composing_custom_layouts_with_swiftui)
 
 ## If you want the app to:
 
