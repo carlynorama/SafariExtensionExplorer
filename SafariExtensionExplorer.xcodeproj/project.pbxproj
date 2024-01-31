@@ -70,7 +70,6 @@
 		D2BACA572B682CA2004CA94F /* SafariExtensionExplorerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionExplorerApp.swift; sourceTree = "<group>"; };
 		D2BACA592B682CA2004CA94F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D2BACA5B2B682CA3004CA94F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D2BACA5D2B682CA3004CA94F /* SafariExtensionExplorer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SafariExtensionExplorer.entitlements; sourceTree = "<group>"; };
 		D2BACA5F2B682CA3004CA94F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D2BACA662B682CCF004CA94F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D2BACA6B2B682DCF004CA94F /* SafariExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SafariExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,7 +168,6 @@
 				D2BACA572B682CA2004CA94F /* SafariExtensionExplorerApp.swift */,
 				D260C7C62B684EF700314D61 /* Shared (App) */,
 				D2BACA5B2B682CA3004CA94F /* Assets.xcassets */,
-				D2BACA5D2B682CA3004CA94F /* SafariExtensionExplorer.entitlements */,
 				D2BACA5E2B682CA3004CA94F /* Preview Content */,
 			);
 			path = SafariExtensionExplorer;
