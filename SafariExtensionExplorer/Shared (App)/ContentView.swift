@@ -10,22 +10,33 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var viewModel = ViewModel()
     
+    @State var messageFromExtension:String = "Haven't heard"
+    
     var body: some View {
         VStack(spacing: 10) {
+            
             Image(systemName: "safari.fill")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
+            Text("WebHelper Extension").font(.largeTitle)
+            
+            AdaptiveStack {
+                Group {
+                    Text(messageFromExtension)
+                    Button("Check Messages") {
+                        messageFromExtension = viewModel.getExtensionMessage()
+                    }
 #if os(macOS)
-            MacContentView().environmentObject(viewModel)
+                    MacContentView().environmentObject(viewModel)
 #else
-            iOSContentView().environmentObject(viewModel)
+                    iOSContentView().environmentObject(viewModel)
 #endif
-
+                }
+            }
+            .padding()
+            
+            
         }
-        .padding()
-        
- 
-        
     }
 }
 

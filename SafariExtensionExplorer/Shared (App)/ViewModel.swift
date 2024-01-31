@@ -18,6 +18,13 @@ import os.log
 class ViewModel:ObservableObject {
     var isEnabled = false
     
+    //MARK: Transfer with Extension Target
+    let appGroupService = AppGroupService(appGroupID: appGroupName)
+    let messageKey = "message"
+    
+    func getExtensionMessage() -> String {
+        appGroupService?.stringForKey(key: messageKey) ?? "No message yet."
+    }
     
 #if os(macOS)
     func setExtensionStatus() async {

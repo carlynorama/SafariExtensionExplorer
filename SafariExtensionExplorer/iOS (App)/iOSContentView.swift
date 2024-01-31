@@ -27,7 +27,10 @@ struct iOSContentView: View {
                     UIApplication.shared.open(url)
                 }
             }
-            Link("Open Page as Link", destination: URL(string: goodSamplePage))
+            if let url = URL(string: goodSamplePage) {
+                Link("Open Page as Link", destination: url)
+            }
+            
         }
     }
 }

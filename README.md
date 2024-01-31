@@ -15,10 +15,14 @@ Steps taken:
 - Basic open Safari pages
 - Basic send a message: (SFSafariApplication.dispatchMessage, page with extension enabled must be open.)
 - Extension & native comms, basic
-- Enable AppGroup (So Containing App Target and Extension Target can talk.)For Each target:
-    - Sign&Cap > AppGroup for MacOS and iOSetc bundles
-    - Add to same AppGroup 
-
+- Native App and Web Extension Integration: The 2020 documentation says AppGroup or XPCConnection
+    - Enable AppGroup (So Containing App Target and Extension Target can talk.)For Each target:
+        - Sign&Cap > AppGroup for MacOS and iOSetc bundles
+        - Add to same AppGroup 
+    - XPCConnection (Unimplemented, is this Mach?)
+        - https://github.com/ChimeHQ/AsyncXPCConnection
+        - https://github.com/CharlesJS/SwiftyXPC
+        - (TODO: unix domain sockets vs web sockets)
 
 ## If you want the app to:
 

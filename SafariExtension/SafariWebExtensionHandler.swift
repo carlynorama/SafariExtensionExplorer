@@ -12,7 +12,13 @@ import os.log
 
 class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
     //private var context: NSExtensionContext?
+    //MARK: Transfer with Extension Target
+    let appGroupService = AppGroupService(appGroupID: appGroupName)
+    let messageKey = "message"
     
+    func setMessageForApp(_ message:String) {
+        appGroupService?.setString(message, forKey: messageKey)
+    }
 
 
     func beginRequest(with context: NSExtensionContext) {
@@ -29,10 +35,14 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
         if #available(iOS 17.0, macOS 14.0, *) {
             message = request?.userInfo?[SFExtensionMessageKey]
         } else {
-            message = request?.userInfo?["message"]
+            message = request?.userInfo?[messageKey]
         }
 
         os_log(.default, "Received message from browser.runtime.sendNativeMessage: %@ (profile: %@)", String(describing: message), profile?.uuidString ?? "none")
+        
+        
+        setMessageForApp(String(describing: message))
+            
 
         let response = NSExtensionItem()
         response.userInfo = [ SFExtensionMessageKey: [ "echo": message ] ]

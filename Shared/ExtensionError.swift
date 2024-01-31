@@ -6,5 +6,7 @@
 //
 
 enum ExtensionError: Error {
-  case unknownRemoteError(message: String)
+  case unknownError(message: String)
 }
+
+

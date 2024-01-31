@@ -15,7 +15,7 @@ struct MacContentView: View {
     @State var enabledStatusText:String = ""
     var body: some View {
         VStack {
-            Text("WebHelper Extension").font(.largeTitle)
+           
             Text("Extension is: \(enabledStatusText)")
                 .font(.title2)
                 .lineLimit(nil)
