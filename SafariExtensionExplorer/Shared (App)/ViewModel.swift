@@ -23,6 +23,7 @@ class ViewModel:ObservableObject {
     let messageKey = "message"
     
     func getExtensionMessage() -> String {
+        
         appGroupService?.stringForKey(key: messageKey) ?? "No message yet."
     }
     

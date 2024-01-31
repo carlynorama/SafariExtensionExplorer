@@ -10,6 +10,17 @@ import os.log
 
 //let SFExtensionMessageKey = "message"  //in some example apps not others.
 
+//NO. Old style. Not available on iOS. 
+//class SafariExtensionHandler: SFSafariExtensionHandler {
+//    override func messageReceivedFromContainingApp(
+//        withName messageName: String,
+//        userInfo: [String : Any]? = nil
+//    ) {
+//        print("hello?")
+//        os_log(.debug, "Received message from containing app: %@ : %@", String(describing: messageName), String(describing: userInfo))
+//    }
+//}
+
 class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
     //private var context: NSExtensionContext?
     //MARK: Transfer with Extension Target
@@ -19,6 +30,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
     func setMessageForApp(_ message:String) {
         appGroupService?.setString(message, forKey: messageKey)
     }
+
 
 
     func beginRequest(with context: NSExtensionContext) {
@@ -38,16 +50,14 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
             message = request?.userInfo?[messageKey]
         }
 
-        os_log(.default, "Received message from browser.runtime.sendNativeMessage: %@ (profile: %@)", String(describing: message), profile?.uuidString ?? "none")
-        
-        
-        setMessageForApp(String(describing: message))
-            
+        os_log(.debug, "Received message from browser.runtime.sendNativeMessage: %@ (profile: %@)", String(describing: message), profile?.uuidString ?? "none")
 
         let response = NSExtensionItem()
         response.userInfo = [ SFExtensionMessageKey: [ "echo": message ] ]
 
         context.completeRequest(returningItems: [ response ], completionHandler: nil)
+        
+        setMessageForApp(String(describing: message))
  
     }
     

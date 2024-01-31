@@ -8,11 +8,12 @@
 //TODO - do I really have to do both?
 //https://developer.apple.com/documentation/xcode/configuring-app-groups
 //$(TeamIdentifierPrefix){YOURS}.safariextensionland put group on the front.
+//But on MacOS I get the dreaded "Using kCFPreferencesAnyUser with a container is only allowed for System Containers, detaching from cfprefsd" error.
 #if os(macOS)
-//$(TeamIdentifierPrefix){YOURS}.safariextensionland
-let appGroupName = "group.{YOURS}.safariextensionland"
+////$(TeamIdentifierPrefix){YOURS}.safariextensionland
+let appGroupName = "group.ID.---.safariextensionland"
 #else
-let appGroupName = "group.{YOURS}.safariextensionland"
+let appGroupName = "group.---.safariextensionland"
 #endif
 
 
