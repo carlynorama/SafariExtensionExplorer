@@ -3,12 +3,13 @@
 //  SafariExtensionExplorer
 //
 //  https://www.hackingwithswift.com/quick-start/swiftui/how-to-automatically-switch-between-hstack-and-vstack-based-on-size-class
-//
+//https://developer.apple.com/documentation/swiftui/anylayout
 
 import SwiftUI
 
-struct AdaptiveStack<Content: View>: View {
+struct AdaptiveLayout<Content: View>: View {
     @Environment(\.horizontalSizeClass) var sizeClass
+    //@Environment(\.dynamicTypeSize) var dynamicTypeSize
     let horizontalAlignment: HorizontalAlignment
     let verticalAlignment: VerticalAlignment
     let spacing: CGFloat?
@@ -22,12 +23,13 @@ struct AdaptiveStack<Content: View>: View {
     }
 
     var body: some View {
-        Group {
-            if sizeClass == .compact {
-                VStack(alignment: horizontalAlignment, spacing: spacing, content: content)
-            } else {
-                HStack(alignment: verticalAlignment, spacing: spacing, content: content)
-            }
+        //let layout = dynamicTypeSize <= .medium ? //&& dynamicTypeSize <= .medium
+        let layout = sizeClass != .compact  ?
+            AnyLayout(HStackLayout(alignment: verticalAlignment, spacing: spacing)) : AnyLayout(VStackLayout(alignment: horizontalAlignment, spacing: spacing))
+
+
+        layout {
+            content()
         }
     }
 }

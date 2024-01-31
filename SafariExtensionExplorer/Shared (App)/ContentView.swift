@@ -20,7 +20,7 @@ struct ContentView: View {
                 .foregroundStyle(.tint)
             Text("WebHelper Extension").font(.largeTitle)
             
-            AdaptiveStack {
+            AdaptiveLayout {
                 Group {
                     Text(messageFromExtension)
                     Button("Check Messages") {
