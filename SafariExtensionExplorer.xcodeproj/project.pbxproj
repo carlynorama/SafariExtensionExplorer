@@ -17,7 +17,6 @@
 		D2404ED62B6BCD6E00083060 /* AdaptiveLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27472882B6A695E00ADCA1C /* AdaptiveLayout.swift */; };
 		D2404ED92B6BCD6E00083060 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2BACA5F2B682CA3004CA94F /* Preview Assets.xcassets */; };
 		D2404EDA2B6BCD6E00083060 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2BACA5B2B682CA3004CA94F /* Assets.xcassets */; };
-		D2404EDC2B6BCD6E00083060 /* SafariExtension  (MacOS).appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D2BACA6B2B682DCF004CA94F /* SafariExtension  (MacOS).appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D2404EE32B6BCD7300083060 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BACA6D2B682DCF004CA94F /* SafariWebExtensionHandler.swift */; };
 		D2404EE42B6BCD7300083060 /* ExtensionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274727E2B69679A00ADCA1C /* ExtensionError.swift */; };
 		D2404EE52B6BCD7300083060 /* SEMessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27472802B69E87300ADCA1C /* SEMessageService.swift */; };
@@ -39,6 +38,7 @@
 		D27472892B6A695E00ADCA1C /* AdaptiveLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27472882B6A695E00ADCA1C /* AdaptiveLayout.swift */; };
 		D27F0B1F2B6843830009840F /* MacContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27F0B1D2B6843830009840F /* MacContentView.swift */; };
 		D27F0B202B6843830009840F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27F0B1E2B6843830009840F /* ViewModel.swift */; };
+		D294E2512B6C0AAD0061B767 /* SafariExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D2BACA6B2B682DCF004CA94F /* SafariExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D2BACA582B682CA2004CA94F /* SafariExtensionExplorerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BACA572B682CA2004CA94F /* SafariExtensionExplorerApp.swift */; };
 		D2BACA5A2B682CA2004CA94F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BACA592B682CA2004CA94F /* ContentView.swift */; };
 		D2BACA5C2B682CA3004CA94F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2BACA5B2B682CA3004CA94F /* Assets.xcassets */; };
@@ -52,45 +52,45 @@
 		D2BACA7B2B682DCF004CA94F /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = D2BACA7A2B682DCF004CA94F /* popup.html */; };
 		D2BACA7D2B682DCF004CA94F /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = D2BACA7C2B682DCF004CA94F /* popup.css */; };
 		D2BACA7F2B682DCF004CA94F /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = D2BACA7E2B682DCF004CA94F /* popup.js */; };
-		D2BACA842B682DCF004CA94F /* SafariExtension  (MacOS).appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D2BACA6B2B682DCF004CA94F /* SafariExtension  (MacOS).appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D2C01DCF2B6BE3AB00FEC64B /* SafariExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D2404EF42B6BCD7300083060 /* SafariExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D2404ECC2B6BCD6E00083060 /* PBXContainerItemProxy */ = {
+		D294E2522B6C0AAD0061B767 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D2BACA4C2B682CA2004CA94F /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D2BACA6A2B682DCF004CA94F;
-			remoteInfo = SafariExtension;
+			remoteInfo = "SafariExtension  (MacOS)";
 		};
-		D2BACA822B682DCF004CA94F /* PBXContainerItemProxy */ = {
+		D2C01DD02B6BE3AB00FEC64B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D2BACA4C2B682CA2004CA94F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D2BACA6A2B682DCF004CA94F;
-			remoteInfo = SafariExtension;
+			remoteGlobalIDString = D2404EE12B6BCD7300083060;
+			remoteInfo = "SafariExtension (iOS)";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D2404EDB2B6BCD6E00083060 /* Embed Foundation Extensions */ = {
+		D294E2542B6C0AAD0061B767 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				D2404EDC2B6BCD6E00083060 /* SafariExtension  (MacOS).appex in Embed Foundation Extensions */,
+				D294E2512B6C0AAD0061B767 /* SafariExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2BACA882B682DCF004CA94F /* Embed Foundation Extensions */ = {
+		D2C01DD22B6BE3AB00FEC64B /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				D2BACA842B682DCF004CA94F /* SafariExtension  (MacOS).appex in Embed Foundation Extensions */,
+				D2C01DCF2B6BE3AB00FEC64B /* SafariExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,9 +98,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D2404EE02B6BCD6E00083060 /* SafariExtensionExplorer (iOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SafariExtensionExplorer (iOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2404EF42B6BCD7300083060 /* SafariExtension (iOS).appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SafariExtension (iOS).appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2404EF52B6BCD7300083060 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = /Users/carlynorama/Developer/GitHub/SafariExtensionExplorer/Info.plist; sourceTree = "<absolute>"; };
+		D2404EE02B6BCD6E00083060 /* SafariExtensionExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafariExtensionExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2404EF42B6BCD7300083060 /* SafariExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SafariExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2404EF52B6BCD7300083060 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "/Users/carlynorama/Developer/GitHub/SafariExtensionExplorer/Extension (MacOS)/Info.plist"; sourceTree = "<absolute>"; };
 		D245B8752B6BDA4D00C6493C /* SafariExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SafariExtension.entitlements; sourceTree = "<group>"; };
 		D260C7C42B684EED00314D61 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		D274727D2B6957BD00ADCA1C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -110,13 +110,13 @@
 		D27F0B182B68435B0009840F /* iOSContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSContentView.swift; sourceTree = "<group>"; };
 		D27F0B1D2B6843830009840F /* MacContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacContentView.swift; sourceTree = "<group>"; };
 		D27F0B1E2B6843830009840F /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		D2BACA542B682CA2004CA94F /* SafariExtensionExplorer (MacOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SafariExtensionExplorer (MacOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2BACA542B682CA2004CA94F /* SafariExtensionExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafariExtensionExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BACA572B682CA2004CA94F /* SafariExtensionExplorerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionExplorerApp.swift; sourceTree = "<group>"; };
 		D2BACA592B682CA2004CA94F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D2BACA5B2B682CA3004CA94F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2BACA5F2B682CA3004CA94F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D2BACA662B682CCF004CA94F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		D2BACA6B2B682DCF004CA94F /* SafariExtension  (MacOS).appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SafariExtension  (MacOS).appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2BACA6B2B682DCF004CA94F /* SafariExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SafariExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BACA6D2B682DCF004CA94F /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
 		D2BACA702B682DCF004CA94F /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
 		D2BACA722B682DCF004CA94F /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
@@ -230,16 +230,17 @@
 				D2BACA552B682CA2004CA94F /* Products */,
 				D245B8732B6BD82B00C6493C /* Extension (iOS) */,
 				D245B8742B6BD8A500C6493C /* Extension (MacOS) */,
+				D2C01DCE2B6BE3AB00FEC64B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		D2BACA552B682CA2004CA94F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D2BACA542B682CA2004CA94F /* SafariExtensionExplorer (MacOS).app */,
-				D2BACA6B2B682DCF004CA94F /* SafariExtension  (MacOS).appex */,
-				D2404EE02B6BCD6E00083060 /* SafariExtensionExplorer (iOS).app */,
-				D2404EF42B6BCD7300083060 /* SafariExtension (iOS).appex */,
+				D2BACA542B682CA2004CA94F /* SafariExtensionExample.app */,
+				D2BACA6B2B682DCF004CA94F /* SafariExtension.appex */,
+				D2404EE02B6BCD6E00083060 /* SafariExtensionExplorer.app */,
+				D2404EF42B6BCD7300083060 /* SafariExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -290,6 +291,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		D2C01DCE2B6BE3AB00FEC64B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -300,16 +308,16 @@
 				D2404ECD2B6BCD6E00083060 /* Sources */,
 				D2404ED72B6BCD6E00083060 /* Frameworks */,
 				D2404ED82B6BCD6E00083060 /* Resources */,
-				D2404EDB2B6BCD6E00083060 /* Embed Foundation Extensions */,
+				D2C01DD22B6BE3AB00FEC64B /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D2404ECB2B6BCD6E00083060 /* PBXTargetDependency */,
+				D2C01DD12B6BE3AB00FEC64B /* PBXTargetDependency */,
 			);
 			name = "SafariExtensionExplorer (iOS)";
 			productName = SafariExtensionExplorer;
-			productReference = D2404EE02B6BCD6E00083060 /* SafariExtensionExplorer (iOS).app */;
+			productReference = D2404EE02B6BCD6E00083060 /* SafariExtensionExplorer.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D2404EE12B6BCD7300083060 /* SafariExtension (iOS) */ = {
@@ -326,7 +334,7 @@
 			);
 			name = "SafariExtension (iOS)";
 			productName = SafariExtension;
-			productReference = D2404EF42B6BCD7300083060 /* SafariExtension (iOS).appex */;
+			productReference = D2404EF42B6BCD7300083060 /* SafariExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		D2BACA532B682CA2004CA94F /* SafariExtensionExplorer (MacOS) */ = {
@@ -336,16 +344,16 @@
 				D2BACA502B682CA2004CA94F /* Sources */,
 				D2BACA512B682CA2004CA94F /* Frameworks */,
 				D2BACA522B682CA2004CA94F /* Resources */,
-				D2BACA882B682DCF004CA94F /* Embed Foundation Extensions */,
+				D294E2542B6C0AAD0061B767 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D2BACA832B682DCF004CA94F /* PBXTargetDependency */,
+				D294E2532B6C0AAD0061B767 /* PBXTargetDependency */,
 			);
 			name = "SafariExtensionExplorer (MacOS)";
 			productName = SafariExtensionExplorer;
-			productReference = D2BACA542B682CA2004CA94F /* SafariExtensionExplorer (MacOS).app */;
+			productReference = D2BACA542B682CA2004CA94F /* SafariExtensionExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D2BACA6A2B682DCF004CA94F /* SafariExtension  (MacOS) */ = {
@@ -362,7 +370,7 @@
 			);
 			name = "SafariExtension  (MacOS)";
 			productName = SafariExtension;
-			productReference = D2BACA6B2B682DCF004CA94F /* SafariExtension  (MacOS).appex */;
+			productReference = D2BACA6B2B682DCF004CA94F /* SafariExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -397,8 +405,8 @@
 			projectRoot = "";
 			targets = (
 				D2BACA532B682CA2004CA94F /* SafariExtensionExplorer (MacOS) */,
-				D2BACA6A2B682DCF004CA94F /* SafariExtension  (MacOS) */,
 				D2404ECA2B6BCD6E00083060 /* SafariExtensionExplorer (iOS) */,
+				D2BACA6A2B682DCF004CA94F /* SafariExtension  (MacOS) */,
 				D2404EE12B6BCD7300083060 /* SafariExtension (iOS) */,
 			);
 		};
@@ -511,15 +519,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D2404ECB2B6BCD6E00083060 /* PBXTargetDependency */ = {
+		D294E2532B6C0AAD0061B767 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D2BACA6A2B682DCF004CA94F /* SafariExtension  (MacOS) */;
-			targetProxy = D2404ECC2B6BCD6E00083060 /* PBXContainerItemProxy */;
+			targetProxy = D294E2522B6C0AAD0061B767 /* PBXContainerItemProxy */;
 		};
-		D2BACA832B682DCF004CA94F /* PBXTargetDependency */ = {
+		D2C01DD12B6BE3AB00FEC64B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D2BACA6A2B682DCF004CA94F /* SafariExtension  (MacOS) */;
-			targetProxy = D2BACA822B682DCF004CA94F /* PBXContainerItemProxy */;
+			target = D2404EE12B6BCD7300083060 /* SafariExtension (iOS) */;
+			targetProxy = D2C01DD02B6BE3AB00FEC64B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -527,7 +535,6 @@
 		D2404EDE2B6BCD6E00083060 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "SafariExtensionExplorer/iOS (App)/SafariExtensionExplorer.entitlements";
@@ -554,10 +561,12 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.carlynorama.SafariExtensionExplorer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SafariExtensionExplorer;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -567,7 +576,6 @@
 		D2404EDF2B6BCD6E00083060 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "SafariExtensionExplorer/iOS (App)/SafariExtensionExplorer.entitlements";
@@ -594,10 +602,12 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.carlynorama.SafariExtensionExplorer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SafariExtensionExplorer;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -613,7 +623,7 @@
 				DEVELOPMENT_TEAM = KH3G9PXA68;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SafariExtension copy-Info.plist";
+				INFOPLIST_FILE = "Extension (iOS)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = SafariExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -628,8 +638,8 @@
 					SafariServices,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.carlynorama.SafariExtensionExplorer.SafariExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				PRODUCT_NAME = SafariExtension;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -648,7 +658,7 @@
 				DEVELOPMENT_TEAM = KH3G9PXA68;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SafariExtension copy-Info.plist";
+				INFOPLIST_FILE = "Extension (iOS)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = SafariExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -663,8 +673,8 @@
 					SafariServices,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.carlynorama.SafariExtensionExplorer.SafariExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				PRODUCT_NAME = SafariExtension;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -791,7 +801,6 @@
 		D2BACA642B682CA3004CA94F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "SafariExtensionExplorer/MacOS (App)/SafariExtensionExplorer.entitlements";
@@ -802,6 +811,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SafariExtensionExample;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -818,7 +828,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.carlynorama.SafariExtensionExplorer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SafariExtensionExample;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = macosx;
 				SUPPORTS_MACCATALYST = NO;
@@ -830,7 +840,6 @@
 		D2BACA652B682CA3004CA94F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "SafariExtensionExplorer/MacOS (App)/SafariExtensionExplorer.entitlements";
@@ -841,6 +850,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SafariExtensionExample;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -857,7 +867,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.carlynorama.SafariExtensionExplorer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SafariExtensionExample;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = macosx;
 				SUPPORTS_MACCATALYST = NO;
@@ -890,7 +900,7 @@
 					SafariServices,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.carlynorama.SafariExtensionExplorer.SafariExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SafariExtension;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
@@ -924,13 +934,14 @@
 					SafariServices,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.carlynorama.SafariExtensionExplorer.SafariExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SafariExtension;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
