@@ -11,12 +11,10 @@
 //But on MacOS I get the dreaded "Using kCFPreferencesAnyUser with a container is only allowed for System Containers, detaching from cfprefsd" error.
 #if os(macOS)
 ////$(TeamIdentifierPrefix){YOURS}.safariextensionland
-let appGroupName = "group.ID.---.safariextensionland"
+let appGroupName = "group.KH3G9PXA68.com.carlynorama.safariextensionland"
 #else
-let appGroupName = "group.---.safariextensionland"
+let appGroupName = "group.com.carlynorama.safariextensionland"
 #endif
-
-
 
 
 let extensionName = "SafariExtension"

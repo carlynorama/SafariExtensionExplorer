@@ -29,9 +29,7 @@ struct MacContentView: View {
                 openURL(URL(string: goodSamplePage)!)
             }
             Button("Send Message To Extension") {
-                Task {
-                    await viewModel.sendBackgroundMessageToExtension(title: "DemoMessage", message: ["Hello":"World"])
-                }
+                 viewModel.sendBackgroundMessageToExtension(title: "DemoMessage", message: ["Hello":"World"])
             }
             
         }.task {

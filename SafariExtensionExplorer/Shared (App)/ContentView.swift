@@ -21,17 +21,21 @@ struct ContentView: View {
             Text("WebHelper Extension").font(.largeTitle)
             
             AdaptiveLayout {
-                Group {
+               Group {
                     Text(messageFromExtension)
                     Button("Check Messages") {
                         messageFromExtension = viewModel.getExtensionMessage()
                     }
-#if os(macOS)
-                    MacContentView().environmentObject(viewModel)
-#else
-                    iOSContentView().environmentObject(viewModel)
-#endif
+                    Button("Send Message") {
+                       viewModel.sendExtensionMessage()
+                    }
                 }
+#if os(macOS)
+                MacContentView().environmentObject(viewModel)
+#else
+                iOSContentView().environmentObject(viewModel)
+#endif
+                
             }
             .padding()
             

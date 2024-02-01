@@ -15,18 +15,40 @@ import SafariServices.SFSafariExtensionManager
 import os.log
 
 
-class ViewModel:ObservableObject {
+final class ViewModel:ObservableObject {
+    init() {
+        self.isEnabled = false
+        self.messageService = AppGroupService(appGroupID: appGroupName)!
+        self.messageService.setToExtensionMessage(to: "first message")
+        self.messageService.setToExtensionMessage(to: "different first message")
+    }
+    
+    let randomWords = ["roomy",
+                       "clean",
+                       "kaput",
+                       "several",
+                       "groovy",
+                       "quickest",
+                       "squalid",
+                       "lopsided",
+                       "peaceful",
+                       "savory"]
+    
     var isEnabled = false
     
     //MARK: Transfer with Extension Target
-    let appGroupService = AppGroupService(appGroupID: appGroupName)
-    let messageKey = "message"
-    
+    let messageService:AppGroupService
+
     func getExtensionMessage() -> String {
-        
-        appGroupService?.stringForKey(key: messageKey) ?? "No message yet."
+        //"Not active."
+        messageService.getFromExtensionMessage() ?? "No Message yet."
     }
     
+    func sendExtensionMessage() {
+        messageService.setToExtensionMessage(to: randomWords.randomElement()!)
+    }
+    
+    //MARK: MacOS Only Functions
 #if os(macOS)
     func setExtensionStatus() async {
         do {
@@ -35,7 +57,7 @@ class ViewModel:ObservableObject {
             await NSApp.presentError(error)
         }
     }
-
+    
     func openSafariSettings() async {
         do {
             try await SFSafariApplication.showPreferencesForExtension(withIdentifier: extensionBundleIdentifier)
@@ -55,7 +77,7 @@ class ViewModel:ObservableObject {
             os_log(.default, "\(error)")
         }
     }
-
+    
     func sendBackgroundMessageToExtension(title:some StringProtocol, message:Dictionary<String,String>) {
         SFSafariApplication.dispatchMessage(withName: title as! String, toExtensionWithIdentifier: extensionBundleIdentifier, userInfo: message) { (error) -> Void in
             os_log(.default, "Dispatching message to the extension finished \(error)")
@@ -73,93 +95,7 @@ class ViewModel:ObservableObject {
         if result != nil { throw result! }
         
     }
-    
-
-    
-//    //Already exists: https://developer.apple.com/documentation/safariservices/sfsafariapplication/1639493-openwindow
-//    func openWindow(with url: URL) async ->  SFSafariWindow? {
-//        await withCheckedContinuation { continuation in
-//            SFSafariApplication.openWindow(with: url) { window in
-//                continuation.resume(returning: window)
-//            }
-//        }
-//    }
-    
 #endif
 }
 
 
-
-//MARK: Storage
-
-//Deprecated? Need UIKit? Methods for opening safari windows.
-// The other methods were not missing the context.
-//No current extension context; trying most recent context
-//No most recent extension context
-//No extension context for best match
-//No extension context for remote object
-/*
- 
- //    //https://developer.apple.com/documentation/safariservices/sfsafariwindow
- func openWindow(with url:URL?) async {
- guard let url else {
- print("url not valid")
- os_log(.error, "url not valid")
- //TODO pass message back to UI
- return
- }
- os_log(.debug, "url valid")
- if let window = await SFSafariApplication.openWindow(with: url) {
- //https://developer.apple.com/documentation/safariservices/sfsafaritoolbaritem
- if let toolBarItem = await window.toolbarItem() {
- toolBarItem.setBadgeText("!")
- }
- //            func setBadgeText(String?)
- //            Sets the badge text for the toolbar item.
- //            func setEnabled(Bool)
- //            Sets whether the toolbar item is enabled.
- //            func setImage(NSImage?)
- //            Sets the image displayed in the toolbar button.
- //            func setLabel(String?)
- //            Instance Methods
- //            func showPopover()
- }
- os_log(.debug, "window open attempts over?")
- }
- 
- 
- func checkForWindow() async {
-     if let window = await  SFSafariApplication.activeWindow() {
-         print(window)
-     } else {
-         print("No active window")
-     }
- }
- 
- func replaceActiveTab(with url:URL?) async {
- guard let url else {
- print("url not valid")
- os_log(.error, "url not valid")
- //TODO pass message back to UI
- return
- }
- os_log(.debug, "url valid")
- 
- if let window = await SFSafariApplication.activeWindow() {
- //https://developer.apple.com/documentation/safariservices/sfsafaritab
- if let tab = await window.activeTab() {
- //https://developer.apple.com/documentation/safariservices/sfsafaripage
- let page = await tab.activePage()
- //func getScreenshotOfVisibleArea(completionHandler: (NSImage?) -> Void)
- //func reload()
- //func dispatchMessageToScript(withName: String, userInfo: [String : Any]?)
- //Dispatches a message from the app extension to the content script injected in this page.
- //https://developer.apple.com/documentation/safariservices/sfsafaripageproperties
- if let properties = await page?.properties() {
- os_log(.default, "replacing \"\(properties.title ?? "")\" with \(url)")
- }
- tab.navigate(to: url)  //how to make sure await arrival?
- }
- }
- }
- */
