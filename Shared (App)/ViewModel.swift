@@ -22,7 +22,8 @@ final class ViewModel:ObservableObject {
         self.messageService.setToExtensionMessage(to: "first message")
         self.messageService.setToExtensionMessage(to: "different first message")
     }
-    
+    var isEnabled = false
+    let messageService:AppGroupService
     let randomWords = ["roomy",
                        "clean",
                        "kaput",
@@ -34,10 +35,10 @@ final class ViewModel:ObservableObject {
                        "peaceful",
                        "savory"]
     
-    var isEnabled = false
+    
     
     //MARK: Transfer with Extension Target
-    let messageService:AppGroupService
+   
 
     func getExtensionMessage() -> String {
         //"Not active."
