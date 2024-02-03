@@ -94,6 +94,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D259E81E2B6C454E00152735 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D259E81F2B6C468200152735 /* SafariExtensionExplorer Extension (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SafariExtensionExplorer Extension (iOS).entitlements"; sourceTree = "<group>"; };
+		D259E8202B6C46F800152735 /* SafariExtensionExplorer (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SafariExtensionExplorer (iOS).entitlements"; sourceTree = "<group>"; };
 		D294E3A02B6C18550061B767 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
 		D294E3A22B6C18550061B767 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
 		D294E3A32B6C18550061B767 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
@@ -157,6 +160,7 @@
 		D294E3912B6C18540061B767 = {
 			isa = PBXGroup;
 			children = (
+				D259E81E2B6C454E00152735 /* README.md */,
 				D294E40B2B6C18B90061B767 /* Shared */,
 				D294E3962B6C18540061B767 /* Shared (App) */,
 				D294E39F2B6C18550061B767 /* Shared (Extension) */,
@@ -217,6 +221,7 @@
 		D294E3B02B6C18550061B767 /* iOS (App) */ = {
 			isa = PBXGroup;
 			children = (
+				D259E8202B6C46F800152735 /* SafariExtensionExplorer (iOS).entitlements */,
 				D294E4272B6C193A0061B767 /* iOSContentView.swift */,
 			);
 			path = "iOS (App)";
@@ -234,6 +239,7 @@
 		D294E3D02B6C18550061B767 /* iOS (Extension) */ = {
 			isa = PBXGroup;
 			children = (
+				D259E81F2B6C468200152735 /* SafariExtensionExplorer Extension (iOS).entitlements */,
 				D294E3D12B6C18550061B767 /* Info.plist */,
 			);
 			path = "iOS (Extension)";
@@ -611,6 +617,7 @@
 		D294E3FE2B6C18550061B767 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "iOS (Extension)/SafariExtensionExplorer Extension (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KH3G9PXA68;
@@ -642,6 +649,7 @@
 		D294E3FF2B6C18550061B767 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "iOS (Extension)/SafariExtensionExplorer Extension (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KH3G9PXA68;
@@ -677,11 +685,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "iOS (App)/SafariExtensionExplorer (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KH3G9PXA68;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_CFBundleDisplayName = SafariExtensionExplorer;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -706,7 +715,6 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -716,11 +724,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "iOS (App)/SafariExtensionExplorer (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KH3G9PXA68;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_CFBundleDisplayName = SafariExtensionExplorer;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
